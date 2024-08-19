@@ -2,7 +2,9 @@ import telebot
 import threading
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 import time
+import os
 
+BOT_TOKEN = os.getenv('BOT_TOKEN')
 bot = telebot.TeleBot(BOT_TOKEN)
 
 @bot.message_handler(commands=['start'])
